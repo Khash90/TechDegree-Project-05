@@ -337,4 +337,78 @@ template {
   display: none;
 }
 
+.grid__col--4, .grid__col--3, .grid__col--2, .grid__col--1 {
+  float: left;
+  padding: 0 10px;
+  margin-left: 2%;
+}
+
+.grid__col--1 {
+  width: 20.5882352941%;
+}
+
+.grid__col--2 {
+  width: 47.0588235294%;
+}
+
+.grid__col--3 {
+  width: 73.5294117647%;
+}
+
+.grid__col--4 {
+  width: 100%;
+}
+
+.grid {
+  width: 90%;
+  max-width: 860px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-gap: 20px;
+  margin-top: 0;
+}
+[class*=grid__col--] > .grid {
+  width: 100%;
+}
+
+.grid:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.centered, .grid {
+  float: none;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.header {
+  display: flex;
+  justify-content: center;
+  margin-top: 5px;
+}
+
+#search {
+  padding: 12px;
+  border: 2px solid rgb(178, 179, 234);
+  border-radius: 5px;
+  width: 510px;
+  margin: 25px;
+}
+
+input {
+  transition: background-color 0.4s ease-in-out;
+}
+
+input:focus {
+  background-color: rgb(75, 75, 165);
+  color: #fff;
+  border-color: rgb(6, 6, 15);
+}
+
+input:focus::placeholder {
+  color: white;
+}
+
 /*# sourceMappingURL=style.css.map */

@@ -1,0 +1,24 @@
+// grid container
+
+.grid{
+    @extend %clearfix;
+    @extend .centered;
+    width: 90%;
+
+    // Make nested grid 100%
+    [class*="grid__col--"] > & {
+        width: 100%;
+    }
+
+    //set a max-width for grid container
+    max-width: $g-cont-max-w;
+
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-gap: 20px;
+    margin-top: 0;
+
+}
+
+
+
