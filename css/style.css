@@ -337,6 +337,29 @@ template {
   display: none;
 }
 
+* {
+  box-sizing: border-box;
+  background-color: rgb(0, 0, 0);
+}
+
+img {
+  border-radius: 2px;
+}
+
+input {
+  transition: background-color 0.4s ease-in-out;
+}
+
+input:focus {
+  background-color: rgb(35, 35, 56);
+  color: #fff;
+  border-color: rgb(6, 6, 15);
+}
+
+input:focus::placeholder {
+  color: white;
+}
+
 .grid__col--4, .grid__col--3, .grid__col--2, .grid__col--1 {
   float: left;
   padding: 0 10px;
@@ -395,20 +418,6 @@ template {
   border-radius: 5px;
   width: 510px;
   margin: 25px;
-}
-
-input {
-  transition: background-color 0.4s ease-in-out;
-}
-
-input:focus {
-  background-color: rgb(75, 75, 165);
-  color: #fff;
-  border-color: rgb(6, 6, 15);
-}
-
-input:focus::placeholder {
-  color: white;
 }
 
 /*# sourceMappingURL=style.css.map */
