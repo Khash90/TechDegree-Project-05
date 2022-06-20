@@ -22,7 +22,6 @@
 // };
  
 function search_bar() {
-    
     let input = document.getElementById('search').value;
     input = input.toLowerCase();
     let images = document.getElementsByClassName('image');
@@ -31,12 +30,11 @@ function search_bar() {
         let img = images[i];
         let caption = img.getAttribute("data-caption").toLowerCase();
 
-        if (caption.indexOf(input) > -1) {
-            images[i].style.display="";  
-            
+        if (!caption.includes(input)) {
+            images[i].style.display="none";
         }
         else {
-            images[i].style.display="none";            
+            images[i].style.display="";                 
         }
     }
 }
