@@ -5,20 +5,26 @@
 
 img{
     border-radius: 2px;
+    object-position: 50% 50%;
+    transition: .5s ease-in-out;
+    &:hover{
+        
+        transform: scale(1.1);
+        cursor: pointer;
+    }
 }
 
 input{
-    
     transition: background-color .4s ease-in-out;
 }
 
 input:focus {
-    background-color: rgb(35, 35, 56);
-    color: #fff;
-    border-color: rgb(6, 6, 15);
+    background-color: $bg-input-color;
+    color: $text-color;
+    border-color: $border-input-color;
     
     
 }
 input:focus::placeholder{
-    color: white;
+    color: $text-color;
 }

@@ -344,6 +344,12 @@ template {
 
 img {
   border-radius: 2px;
+  object-position: 50% 50%;
+  transition: 0.5s ease-in-out;
+}
+img:hover {
+  transform: scale(1.1);
+  cursor: pointer;
 }
 
 input {
@@ -357,7 +363,7 @@ input:focus {
 }
 
 input:focus::placeholder {
-  color: white;
+  color: #fff;
 }
 
 .grid__col--4, .grid__col--3, .grid__col--2, .grid__col--1 {
@@ -404,6 +410,7 @@ input:focus::placeholder {
   float: none;
   margin-left: auto;
   margin-right: auto;
+  justify-items: center;
 }
 
 .header {
